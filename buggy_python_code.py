@@ -45,6 +45,7 @@ def authenticate(password):
     assert password == "Iloveyou", "Invalid password!"
     print("Successfully authenticated!")
 
+
 if __name__ == '__main__':
     print("Vulnerabilities:")
     print("1. Format string vulnerability: use string={person.__init__.__globals__[CONFIG][API_KEY]}")
@@ -54,7 +55,7 @@ if __name__ == '__main__':
     choice  = input("Select vulnerability: ")
     if choice == "1":
         new_person = Person("Vickie")
-	print_nametag(input("Please format your nametag: "), new_person)
+        print_nametag(input("Please format your nametag: "), new_person)
     elif choice == "2":
         urlib_version = input("Choose version of urllib: ")
         fetch_website(urlib_version, url="https://www.google.com")
